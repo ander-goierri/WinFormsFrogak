@@ -16,12 +16,13 @@ namespace WinFormsApp
             this.MinimumSize = new Size(800, 600); // Pantaila tamaina minimoa ezartzen da
             this.Text = "Inbentario kudeaketa"; // Leihoaren izena
 
-            InterfazeaSortu();
+            //InterfazeaSortu();
 
         }
 
         private void InterfazeaSortu()
         {
+            
             // Ezkerreko menua
             panelMenu = new Panel();
             panelMenu.Dock = DockStyle.Left;
@@ -51,25 +52,35 @@ namespace WinFormsApp
             lblTitulo.Height = 80;
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
             panelContenido.Controls.Add(lblTitulo);
+            
         }
 
         private void BtnVerProductos_Click(object? sender, EventArgs e)
         {
-            MostrarProductos();
+            ProduktuakErakutsi(panelContenido);
         }
 
-        private void MostrarProductos()
+        private void ProduktuakErakutsi(Panel panel)
         {
-            panelContenido.Controls.Clear();
+            panel.Controls.Clear();
 
             var grid = new DataGridView();
             grid.Dock = DockStyle.Fill;
             grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            grid.DataSource = ProduktuakController.DenakLortu(); 
+            grid.DataSource = ProduktuakController.DenakLortu();
 
-            panelContenido.Controls.Add(grid);
+            panel.Controls.Add(grid);
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProduktuakErakutsi(panel2);
+        }
     }
 
 }
