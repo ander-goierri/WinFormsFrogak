@@ -22,7 +22,7 @@ namespace WinFormsApp
 
         private void InterfazeaSortu()
         {
-            
+
             // Ezkerreko menua
             panelMenu = new Panel();
             panelMenu.Dock = DockStyle.Left;
@@ -52,7 +52,7 @@ namespace WinFormsApp
             lblTitulo.Height = 80;
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
             panelContenido.Controls.Add(lblTitulo);
-            
+
         }
 
         private void BtnVerProductos_Click(object? sender, EventArgs e)
@@ -80,6 +80,11 @@ namespace WinFormsApp
         private void button1_Click(object sender, EventArgs e)
         {
             ProduktuakErakutsi(panel2);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

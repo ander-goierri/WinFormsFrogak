@@ -28,57 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            leftPanel = new Panel();
             panel2 = new Panel();
-            button1 = new Button();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // leftPanel
             // 
-            panel1.BackColor = Color.LightSlateGray;
-            panel1.Controls.Add(button1);
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(214, 451);
-            panel1.TabIndex = 0;
+            leftPanel.BackColor = Color.LightSlateGray;
+            leftPanel.Dock = DockStyle.Left;
+            leftPanel.Location = new Point(0, 0);
+            leftPanel.Name = "leftPanel";
+            leftPanel.Size = new Size(200, 579);
+            leftPanel.TabIndex = 0;
             // 
             // panel2
             // 
             panel2.BackColor = Color.WhiteSmoke;
-            panel2.Location = new Point(220, 0);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(200, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(581, 451);
+            panel2.Size = new Size(940, 579);
             panel2.TabIndex = 1;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(214, 41);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            panel2.Paint += panel1_Paint;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1140, 579);
             Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(leftPanel);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
-            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel leftPanel;
         private Panel panel2;
-        private Button button1;
     }
 }
