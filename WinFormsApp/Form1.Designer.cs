@@ -29,17 +29,32 @@
         private void InitializeComponent()
         {
             leftPanel = new Panel();
+            btnProdIkusi = new Button();
             panel2 = new Panel();
+            leftPanel.SuspendLayout();
             SuspendLayout();
             // 
             // leftPanel
             // 
             leftPanel.BackColor = Color.LightSlateGray;
+            leftPanel.Controls.Add(btnProdIkusi);
             leftPanel.Dock = DockStyle.Left;
             leftPanel.Location = new Point(0, 0);
             leftPanel.Name = "leftPanel";
             leftPanel.Size = new Size(200, 579);
             leftPanel.TabIndex = 0;
+            // 
+            // btnProdIkusi
+            // 
+            btnProdIkusi.BackColor = Color.GhostWhite;
+            btnProdIkusi.Dock = DockStyle.Top;
+            btnProdIkusi.Location = new Point(0, 0);
+            btnProdIkusi.Name = "btnProdIkusi";
+            btnProdIkusi.Size = new Size(200, 50);
+            btnProdIkusi.TabIndex = 0;
+            btnProdIkusi.Text = "Produktuak ikusi";
+            btnProdIkusi.UseVisualStyleBackColor = false;
+            btnProdIkusi.Click += btnProdIkusi_Click;
             // 
             // panel2
             // 
@@ -61,6 +76,7 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            leftPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -68,5 +84,6 @@
 
         private Panel leftPanel;
         private Panel panel2;
+        private Button btnProdIkusi;
     }
 }

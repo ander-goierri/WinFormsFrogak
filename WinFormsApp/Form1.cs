@@ -74,17 +74,17 @@ namespace WinFormsApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ProduktuakErakutsi(panel2);
+            //System.Windows.Forms.MessageBox.Show("Nire mezua");
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnProdIkusi_Click(object sender, EventArgs e)
+        {
+            ProduktuakErakutsi(panel2);
         }
     }
 
