@@ -16,6 +16,7 @@ namespace WinFormsApp
             this.MinimumSize = new Size(800, 600); // Pantaila tamaina minimoa ezartzen da
             this.Text = "Inbentario kudeaketa"; // Leihoaren izena
 
+            //Ezkerreko panela pantailaren arabera moldatzeko
             this.Resize += new EventHandler(MainForm_Resize);
             UpdateLeftPanelSize();
 
