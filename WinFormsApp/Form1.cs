@@ -40,27 +40,48 @@ namespace WinFormsApp
 
             // Adibidez, zabaleraren %20 izango da leftPanel
             int width = (int)(this.ClientSize.Width * 0.2);
-            leftPanelFlowLayout.Size = new Size(width, this.ClientSize.Height);
+            leftPanel.Size = new Size(width, this.ClientSize.Height);
 
-            int buttonWidth = leftPanelFlowLayout.ClientSize.Width - leftPanelFlowLayout.Padding.Left - leftPanelFlowLayout.Padding.Right;
+            int buttonWidth = leftPanel.ClientSize.Width - leftPanel.Padding.Left - leftPanel.Padding.Right;
 
             buttonWidth = buttonWidth - 7; // Ezker eta eskuinean marginak antzekoak izateko
 
-            LeftPanel_Button1.Width = buttonWidth;
-            LeftPanel_Button2.Width = buttonWidth;
+            lpButton1.Width = buttonWidth;
+            lpButton2.Width = buttonWidth;
 
         }
 
         private void UpdateRightPanel()
         {
-            int width = (int)rightPanelTableLayout.Width;
-            bodyTitlePanel.Width = width;
+            
+            int fullWidth = (int)rightPanel.Width;
             int leftWidth = (int)(this.ClientSize.Width * 0.2);
             int rightWidth = (int)(this.ClientSize.Width * 0.8);
-            panel3.Width = leftWidth;
-            panel1.Width = rightWidth;
-            label1.Width = rightWidth;
 
+            //Panelak zentratu
+            titleBody.Width = fullWidth;
+            rpLeftNamePanel.Width = leftWidth;
+            rpRightInputPanel.Width = rightWidth;
+            //Titulua zentratu
+            titleBodyLabel.Width = rightWidth;
+
+            //Labelak zentratu bertikalki eta horizontalki
+            zentratuBertikalEtaHorizontalki(rpLeftNamePanelLabel, rpLeftNamePanel);
+
+        }
+
+        private void zentratuBertikalEtaHorizontalki(Control elem, Panel panel)
+        {
+            int panelWidth = panel.Width;
+            int panelHeight = panel.Height;
+
+            int labelWidth = elem.Width;
+            int labelHeight = elem.Height;
+
+            elem.Location = new Point(
+                (panelWidth - labelWidth) / 2,
+                (panelHeight - labelHeight) / 2
+            );
         }
 
         private void InterfazeaSortu()

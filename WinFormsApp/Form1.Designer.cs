@@ -28,56 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            leftPanelFlowLayout = new FlowLayoutPanel();
-            LeftPanel_Button1 = new Button();
-            LeftPanel_Button2 = new Button();
+            leftPanel = new FlowLayoutPanel();
+            lpButton1 = new Button();
+            lpButton2 = new Button();
             MainPanel = new Panel();
-            rightPanelTableLayout = new TableLayoutPanel();
-            bodyTitlePanel = new FlowLayoutPanel();
-            label1 = new Label();
-            panel3 = new Panel();
-            panel1 = new Panel();
-            leftPanelFlowLayout.SuspendLayout();
+            rightPanel = new TableLayoutPanel();
+            titleBody = new FlowLayoutPanel();
+            titleBodyLabel = new Label();
+            rpLeftNamePanel = new Panel();
+            rpLeftNamePanelLabel = new Label();
+            rpRightInputPanel = new Panel();
+            leftPanel.SuspendLayout();
             MainPanel.SuspendLayout();
-            rightPanelTableLayout.SuspendLayout();
-            bodyTitlePanel.SuspendLayout();
+            rightPanel.SuspendLayout();
+            titleBody.SuspendLayout();
+            rpLeftNamePanel.SuspendLayout();
             SuspendLayout();
             // 
-            // leftPanelFlowLayout
+            // leftPanel
             // 
-            leftPanelFlowLayout.BackColor = Color.LightSlateGray;
-            leftPanelFlowLayout.Controls.Add(LeftPanel_Button1);
-            leftPanelFlowLayout.Controls.Add(LeftPanel_Button2);
-            leftPanelFlowLayout.Dock = DockStyle.Left;
-            leftPanelFlowLayout.FlowDirection = FlowDirection.TopDown;
-            leftPanelFlowLayout.Location = new Point(0, 0);
-            leftPanelFlowLayout.Name = "leftPanelFlowLayout";
-            leftPanelFlowLayout.Size = new Size(320, 772);
-            leftPanelFlowLayout.TabIndex = 0;
+            leftPanel.BackColor = Color.LightSlateGray;
+            leftPanel.Controls.Add(lpButton1);
+            leftPanel.Controls.Add(lpButton2);
+            leftPanel.Dock = DockStyle.Left;
+            leftPanel.FlowDirection = FlowDirection.TopDown;
+            leftPanel.Location = new Point(0, 0);
+            leftPanel.Name = "leftPanel";
+            leftPanel.Size = new Size(320, 772);
+            leftPanel.TabIndex = 0;
             // 
-            // LeftPanel_Button1
+            // lpButton1
             // 
-            LeftPanel_Button1.Location = new Point(3, 3);
-            LeftPanel_Button1.Name = "LeftPanel_Button1";
-            LeftPanel_Button1.Size = new Size(317, 60);
-            LeftPanel_Button1.TabIndex = 1;
-            LeftPanel_Button1.Text = "Zerrenda ikusi";
-            LeftPanel_Button1.UseVisualStyleBackColor = true;
+            lpButton1.Location = new Point(3, 3);
+            lpButton1.Name = "lpButton1";
+            lpButton1.Size = new Size(317, 60);
+            lpButton1.TabIndex = 1;
+            lpButton1.Text = "Zerrenda ikusi";
+            lpButton1.UseVisualStyleBackColor = true;
             // 
-            // LeftPanel_Button2
+            // lpButton2
             // 
-            LeftPanel_Button2.Location = new Point(3, 69);
-            LeftPanel_Button2.Name = "LeftPanel_Button2";
-            LeftPanel_Button2.Size = new Size(317, 60);
-            LeftPanel_Button2.TabIndex = 2;
-            LeftPanel_Button2.Text = "Menua ikusi";
-            LeftPanel_Button2.UseVisualStyleBackColor = true;
+            lpButton2.Location = new Point(3, 69);
+            lpButton2.Name = "lpButton2";
+            lpButton2.Size = new Size(317, 60);
+            lpButton2.TabIndex = 2;
+            lpButton2.Text = "Menua ikusi";
+            lpButton2.UseVisualStyleBackColor = true;
             // 
             // MainPanel
             // 
             MainPanel.BackColor = Color.WhiteSmoke;
-            MainPanel.Controls.Add(rightPanelTableLayout);
-            MainPanel.Controls.Add(leftPanelFlowLayout);
+            MainPanel.Controls.Add(rightPanel);
+            MainPanel.Controls.Add(leftPanel);
             MainPanel.Dock = DockStyle.Fill;
             MainPanel.Location = new Point(0, 0);
             MainPanel.Margin = new Padding(3, 4, 3, 4);
@@ -85,64 +87,77 @@
             MainPanel.Size = new Size(1303, 772);
             MainPanel.TabIndex = 1;
             // 
-            // rightPanelTableLayout
+            // rightPanel
             // 
-            rightPanelTableLayout.BackColor = Color.WhiteSmoke;
-            rightPanelTableLayout.ColumnCount = 2;
-            rightPanelTableLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            rightPanelTableLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80F));
-            rightPanelTableLayout.Controls.Add(bodyTitlePanel, 0, 0);
-            rightPanelTableLayout.Controls.Add(panel3, 0, 2);
-            rightPanelTableLayout.Controls.Add(panel1, 1, 2);
-            rightPanelTableLayout.Dock = DockStyle.Fill;
-            rightPanelTableLayout.Location = new Point(320, 0);
-            rightPanelTableLayout.Name = "rightPanelTableLayout";
-            rightPanelTableLayout.RowCount = 5;
-            rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 5F));
-            rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 15F));
-            rightPanelTableLayout.Size = new Size(983, 772);
-            rightPanelTableLayout.TabIndex = 1;
+            rightPanel.BackColor = Color.WhiteSmoke;
+            rightPanel.ColumnCount = 2;
+            rightPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            rightPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80F));
+            rightPanel.Controls.Add(titleBody, 0, 0);
+            rightPanel.Controls.Add(rpLeftNamePanel, 0, 2);
+            rightPanel.Controls.Add(rpRightInputPanel, 1, 2);
+            rightPanel.Dock = DockStyle.Fill;
+            rightPanel.Location = new Point(320, 0);
+            rightPanel.Name = "rightPanel";
+            rightPanel.RowCount = 5;
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            rightPanel.Size = new Size(983, 772);
+            rightPanel.TabIndex = 1;
             // 
-            // bodyTitlePanel
+            // titleBody
             // 
-            bodyTitlePanel.BackColor = Color.Transparent;
-            rightPanelTableLayout.SetColumnSpan(bodyTitlePanel, 2);
-            bodyTitlePanel.Controls.Add(label1);
-            bodyTitlePanel.Location = new Point(3, 3);
-            bodyTitlePanel.Name = "bodyTitlePanel";
-            bodyTitlePanel.Size = new Size(968, 32);
-            bodyTitlePanel.TabIndex = 0;
+            titleBody.BackColor = Color.Transparent;
+            rightPanel.SetColumnSpan(titleBody, 2);
+            titleBody.Controls.Add(titleBodyLabel);
+            titleBody.Location = new Point(3, 3);
+            titleBody.Name = "titleBody";
+            titleBody.Size = new Size(968, 69);
+            titleBody.TabIndex = 0;
             // 
-            // label1
+            // titleBodyLabel
             // 
-            label1.BackColor = Color.Green;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(3, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(965, 28);
-            label1.TabIndex = 0;
-            label1.Text = "Formulario nagusia";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            titleBodyLabel.BackColor = Color.Transparent;
+            titleBodyLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            titleBodyLabel.ForeColor = Color.Black;
+            titleBodyLabel.Location = new Point(3, 0);
+            titleBodyLabel.Name = "titleBodyLabel";
+            titleBodyLabel.Size = new Size(965, 60);
+            titleBodyLabel.TabIndex = 0;
+            titleBodyLabel.Text = "Formulario nagusia";
+            titleBodyLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel3
+            // rpLeftNamePanel
             // 
-            panel3.BackColor = Color.IndianRed;
-            panel3.Location = new Point(3, 118);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(188, 147);
-            panel3.TabIndex = 2;
+            rpLeftNamePanel.BackColor = Color.IndianRed;
+            rpLeftNamePanel.Controls.Add(rpLeftNamePanelLabel);
+            rpLeftNamePanel.Location = new Point(3, 157);
+            rpLeftNamePanel.Name = "rpLeftNamePanel";
+            rpLeftNamePanel.Size = new Size(188, 147);
+            rpLeftNamePanel.TabIndex = 2;
             // 
-            // panel1
+            // rpLeftNamePanelLabel
             // 
-            panel1.BackColor = Color.MistyRose;
-            panel1.Location = new Point(199, 118);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(774, 147);
-            panel1.TabIndex = 3;
+            rpLeftNamePanelLabel.BackColor = Color.Beige;
+            rpLeftNamePanelLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            rpLeftNamePanelLabel.ForeColor = Color.Black;
+            rpLeftNamePanelLabel.Location = new Point(-5, 36);
+            rpLeftNamePanelLabel.Name = "rpLeftNamePanelLabel";
+            rpLeftNamePanelLabel.Size = new Size(193, 60);
+            rpLeftNamePanelLabel.TabIndex = 0;
+            rpLeftNamePanelLabel.Text = "Izena";
+            rpLeftNamePanelLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // rpRightInputPanel
+            // 
+            rpRightInputPanel.BackColor = Color.MistyRose;
+            rpRightInputPanel.Location = new Point(199, 157);
+            rpRightInputPanel.Name = "rpRightInputPanel";
+            rpRightInputPanel.Size = new Size(774, 147);
+            rpRightInputPanel.TabIndex = 3;
             // 
             // Form1
             // 
@@ -153,23 +168,25 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
-            leftPanelFlowLayout.ResumeLayout(false);
+            leftPanel.ResumeLayout(false);
             MainPanel.ResumeLayout(false);
-            rightPanelTableLayout.ResumeLayout(false);
-            bodyTitlePanel.ResumeLayout(false);
+            rightPanel.ResumeLayout(false);
+            titleBody.ResumeLayout(false);
+            rpLeftNamePanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private FlowLayoutPanel leftPanelFlowLayout;
-        private Button LeftPanel_Button1;
-        private Button LeftPanel_Button2;
+        private FlowLayoutPanel leftPanel;
+        private Button lpButton1;
+        private Button lpButton2;
         private Panel MainPanel;
-        private TableLayoutPanel rightPanelTableLayout;
-        private FlowLayoutPanel bodyTitlePanel;
-        private Panel panel3;
-        private Panel panel1;
-        private Label label1;
+        private TableLayoutPanel rightPanel;
+        private FlowLayoutPanel titleBody;
+        private Panel rpLeftNamePanel;
+        private Panel rpRightInputPanel;
+        private Label titleBodyLabel;
+        private Label rpLeftNamePanelLabel;
     }
 }
