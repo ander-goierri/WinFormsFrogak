@@ -53,7 +53,7 @@ namespace WinFormsApp
 
         private void UpdateRightPanel()
         {
-            
+
             int fullWidth = (int)rightPanel.Width;
             int leftWidth = (int)(this.ClientSize.Width * 0.2);
             int rightWidth = (int)(this.ClientSize.Width * 0.8);
@@ -67,6 +67,8 @@ namespace WinFormsApp
 
             //Labelak zentratu bertikalki eta horizontalki
             zentratuBertikalEtaHorizontalki(rpLeftNamePanelLabel, rpLeftNamePanel);
+            zentratuBertikalEtaHorizontalki(rpLeftNamePanelTextbox, rpRightInputPanel);
+            zentratuBertikalEtaHorizontalki(rpLeftDescriptionPanelLabel, rpLeftDescriptionPanel);
 
         }
 
@@ -136,6 +138,10 @@ namespace WinFormsApp
             panel.Controls.Add(grid);
         }
 
+        private void rpLeftDescriptionPanelLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

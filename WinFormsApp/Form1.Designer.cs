@@ -38,11 +38,17 @@
             rpLeftNamePanel = new Panel();
             rpLeftNamePanelLabel = new Label();
             rpRightInputPanel = new Panel();
+            rpLeftNamePanelTextbox = new TextBox();
+            rpLeftDescriptionPanel = new Panel();
+            rpLeftDescriptionPanelLabel = new Label();
+            textBox1 = new TextBox();
             leftPanel.SuspendLayout();
             MainPanel.SuspendLayout();
             rightPanel.SuspendLayout();
             titleBody.SuspendLayout();
             rpLeftNamePanel.SuspendLayout();
+            rpRightInputPanel.SuspendLayout();
+            rpLeftDescriptionPanel.SuspendLayout();
             SuspendLayout();
             // 
             // leftPanel
@@ -96,6 +102,8 @@
             rightPanel.Controls.Add(titleBody, 0, 0);
             rightPanel.Controls.Add(rpLeftNamePanel, 0, 2);
             rightPanel.Controls.Add(rpRightInputPanel, 1, 2);
+            rightPanel.Controls.Add(rpLeftDescriptionPanel, 0, 3);
+            rightPanel.Controls.Add(textBox1, 1, 3);
             rightPanel.Dock = DockStyle.Fill;
             rightPanel.Location = new Point(320, 0);
             rightPanel.Name = "rightPanel";
@@ -105,6 +113,52 @@
             rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             rightPanel.Size = new Size(983, 772);
             rightPanel.TabIndex = 1;
             // 
@@ -115,7 +169,7 @@
             titleBody.Controls.Add(titleBodyLabel);
             titleBody.Location = new Point(3, 3);
             titleBody.Name = "titleBody";
-            titleBody.Size = new Size(968, 69);
+            titleBody.Size = new Size(968, 68);
             titleBody.TabIndex = 0;
             // 
             // titleBodyLabel
@@ -136,12 +190,12 @@
             rpLeftNamePanel.Controls.Add(rpLeftNamePanelLabel);
             rpLeftNamePanel.Location = new Point(3, 157);
             rpLeftNamePanel.Name = "rpLeftNamePanel";
-            rpLeftNamePanel.Size = new Size(188, 147);
+            rpLeftNamePanel.Size = new Size(188, 142);
             rpLeftNamePanel.TabIndex = 2;
             // 
             // rpLeftNamePanelLabel
             // 
-            rpLeftNamePanelLabel.BackColor = Color.Beige;
+            rpLeftNamePanelLabel.BackColor = Color.Gainsboro;
             rpLeftNamePanelLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             rpLeftNamePanelLabel.ForeColor = Color.Black;
             rpLeftNamePanelLabel.Location = new Point(-5, 36);
@@ -153,11 +207,51 @@
             // 
             // rpRightInputPanel
             // 
-            rpRightInputPanel.BackColor = Color.MistyRose;
+            rpRightInputPanel.BackColor = Color.Transparent;
+            rpRightInputPanel.Controls.Add(rpLeftNamePanelTextbox);
             rpRightInputPanel.Location = new Point(199, 157);
             rpRightInputPanel.Name = "rpRightInputPanel";
-            rpRightInputPanel.Size = new Size(774, 147);
+            rpRightInputPanel.Size = new Size(774, 142);
             rpRightInputPanel.TabIndex = 3;
+            // 
+            // rpLeftNamePanelTextbox
+            // 
+            rpLeftNamePanelTextbox.Location = new Point(110, 56);
+            rpLeftNamePanelTextbox.Name = "rpLeftNamePanelTextbox";
+            rpLeftNamePanelTextbox.Size = new Size(581, 27);
+            rpLeftNamePanelTextbox.TabIndex = 0;
+            // 
+            // rpLeftDescriptionPanel
+            // 
+            rpLeftDescriptionPanel.BackColor = Color.IndianRed;
+            rpLeftDescriptionPanel.Controls.Add(rpLeftDescriptionPanelLabel);
+            rpLeftDescriptionPanel.Location = new Point(3, 311);
+            rpLeftDescriptionPanel.Name = "rpLeftDescriptionPanel";
+            rpLeftDescriptionPanel.Size = new Size(190, 365);
+            rpLeftDescriptionPanel.TabIndex = 4;
+            // 
+            // rpLeftDescriptionPanelLabel
+            // 
+            rpLeftDescriptionPanelLabel.BackColor = Color.Gainsboro;
+            rpLeftDescriptionPanelLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            rpLeftDescriptionPanelLabel.ForeColor = Color.Black;
+            rpLeftDescriptionPanelLabel.Location = new Point(0, 143);
+            rpLeftDescriptionPanelLabel.Name = "rpLeftDescriptionPanelLabel";
+            rpLeftDescriptionPanelLabel.Size = new Size(193, 60);
+            rpLeftDescriptionPanelLabel.TabIndex = 1;
+            rpLeftDescriptionPanelLabel.Text = "Deskripzioa";
+            rpLeftDescriptionPanelLabel.TextAlign = ContentAlignment.MiddleCenter;
+            rpLeftDescriptionPanelLabel.Click += rpLeftDescriptionPanelLabel_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Dock = DockStyle.Fill;
+            textBox1.Location = new Point(236, 348);
+            textBox1.Margin = new Padding(40);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(707, 306);
+            textBox1.TabIndex = 5;
             // 
             // Form1
             // 
@@ -171,8 +265,12 @@
             leftPanel.ResumeLayout(false);
             MainPanel.ResumeLayout(false);
             rightPanel.ResumeLayout(false);
+            rightPanel.PerformLayout();
             titleBody.ResumeLayout(false);
             rpLeftNamePanel.ResumeLayout(false);
+            rpRightInputPanel.ResumeLayout(false);
+            rpRightInputPanel.PerformLayout();
+            rpLeftDescriptionPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -188,5 +286,9 @@
         private Panel rpRightInputPanel;
         private Label titleBodyLabel;
         private Label rpLeftNamePanelLabel;
+        private TextBox rpLeftNamePanelTextbox;
+        private Panel rpLeftDescriptionPanel;
+        private Label rpLeftDescriptionPanelLabel;
+        private TextBox textBox1;
     }
 }
