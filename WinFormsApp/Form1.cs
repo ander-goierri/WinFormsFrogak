@@ -61,6 +61,7 @@ namespace WinFormsApp
             //Panelak zentratu
             titleBody.Width = fullWidth;
             rpLeftNamePanel.Width = leftWidth;
+            rpLeftDescriptionPanel.Width = leftWidth;
             rpRightInputPanel.Width = rightWidth;
             //Titulua zentratu
             titleBodyLabel.Width = rightWidth;
@@ -69,6 +70,9 @@ namespace WinFormsApp
             zentratuBertikalEtaHorizontalki(rpLeftNamePanelLabel, rpLeftNamePanel);
             zentratuBertikalEtaHorizontalki(rpLeftNamePanelTextbox, rpRightInputPanel);
             zentratuBertikalEtaHorizontalki(rpLeftDescriptionPanelLabel, rpLeftDescriptionPanel);
+            rpLeftDescriptionPanelTextBox.Width = (int)(rpRightDescriptionInputPanel.Width * 0.7);
+            rpLeftDescriptionPanelTextBox.Height = (int)(rpRightDescriptionInputPanel.Height * 0.8);
+            zentratuBertikalEtaHorizontalki(rpLeftDescriptionPanelTextBox, rpRightDescriptionInputPanel);
 
         }
 
@@ -139,6 +143,16 @@ namespace WinFormsApp
         }
 
         private void rpLeftDescriptionPanelLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rpLeftDescriptionPanelTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rightPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

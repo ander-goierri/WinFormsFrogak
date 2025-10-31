@@ -41,7 +41,8 @@
             rpLeftNamePanelTextbox = new TextBox();
             rpLeftDescriptionPanel = new Panel();
             rpLeftDescriptionPanelLabel = new Label();
-            textBox1 = new TextBox();
+            rpRightDescriptionInputPanel = new Panel();
+            rpLeftDescriptionPanelTextBox = new TextBox();
             leftPanel.SuspendLayout();
             MainPanel.SuspendLayout();
             rightPanel.SuspendLayout();
@@ -49,6 +50,7 @@
             rpLeftNamePanel.SuspendLayout();
             rpRightInputPanel.SuspendLayout();
             rpLeftDescriptionPanel.SuspendLayout();
+            rpRightDescriptionInputPanel.SuspendLayout();
             SuspendLayout();
             // 
             // leftPanel
@@ -90,7 +92,7 @@
             MainPanel.Location = new Point(0, 0);
             MainPanel.Margin = new Padding(3, 4, 3, 4);
             MainPanel.Name = "MainPanel";
-            MainPanel.Size = new Size(1303, 772);
+            MainPanel.Size = new Size(1329, 772);
             MainPanel.TabIndex = 1;
             // 
             // rightPanel
@@ -103,7 +105,7 @@
             rightPanel.Controls.Add(rpLeftNamePanel, 0, 2);
             rightPanel.Controls.Add(rpRightInputPanel, 1, 2);
             rightPanel.Controls.Add(rpLeftDescriptionPanel, 0, 3);
-            rightPanel.Controls.Add(textBox1, 1, 3);
+            rightPanel.Controls.Add(rpRightDescriptionInputPanel, 1, 3);
             rightPanel.Dock = DockStyle.Fill;
             rightPanel.Location = new Point(320, 0);
             rightPanel.Name = "rightPanel";
@@ -159,8 +161,9 @@
             rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.Size = new Size(983, 772);
+            rightPanel.Size = new Size(1009, 772);
             rightPanel.TabIndex = 1;
+            rightPanel.Paint += rightPanel_Paint;
             // 
             // titleBody
             // 
@@ -188,9 +191,10 @@
             // 
             rpLeftNamePanel.BackColor = Color.IndianRed;
             rpLeftNamePanel.Controls.Add(rpLeftNamePanelLabel);
+            rpLeftNamePanel.Dock = DockStyle.Fill;
             rpLeftNamePanel.Location = new Point(3, 157);
             rpLeftNamePanel.Name = "rpLeftNamePanel";
-            rpLeftNamePanel.Size = new Size(188, 142);
+            rpLeftNamePanel.Size = new Size(195, 148);
             rpLeftNamePanel.TabIndex = 2;
             // 
             // rpLeftNamePanelLabel
@@ -209,7 +213,7 @@
             // 
             rpRightInputPanel.BackColor = Color.Transparent;
             rpRightInputPanel.Controls.Add(rpLeftNamePanelTextbox);
-            rpRightInputPanel.Location = new Point(199, 157);
+            rpRightInputPanel.Location = new Point(204, 157);
             rpRightInputPanel.Name = "rpRightInputPanel";
             rpRightInputPanel.Size = new Size(774, 142);
             rpRightInputPanel.TabIndex = 3;
@@ -225,9 +229,10 @@
             // 
             rpLeftDescriptionPanel.BackColor = Color.IndianRed;
             rpLeftDescriptionPanel.Controls.Add(rpLeftDescriptionPanelLabel);
+            rpLeftDescriptionPanel.Dock = DockStyle.Fill;
             rpLeftDescriptionPanel.Location = new Point(3, 311);
             rpLeftDescriptionPanel.Name = "rpLeftDescriptionPanel";
-            rpLeftDescriptionPanel.Size = new Size(190, 365);
+            rpLeftDescriptionPanel.Size = new Size(195, 380);
             rpLeftDescriptionPanel.TabIndex = 4;
             // 
             // rpLeftDescriptionPanelLabel
@@ -243,21 +248,30 @@
             rpLeftDescriptionPanelLabel.TextAlign = ContentAlignment.MiddleCenter;
             rpLeftDescriptionPanelLabel.Click += rpLeftDescriptionPanelLabel_Click;
             // 
-            // textBox1
+            // rpRightDescriptionInputPanel
             // 
-            textBox1.Dock = DockStyle.Fill;
-            textBox1.Location = new Point(236, 348);
-            textBox1.Margin = new Padding(40);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(707, 306);
-            textBox1.TabIndex = 5;
+            rpRightDescriptionInputPanel.Controls.Add(rpLeftDescriptionPanelTextBox);
+            rpRightDescriptionInputPanel.Dock = DockStyle.Fill;
+            rpRightDescriptionInputPanel.Location = new Point(201, 308);
+            rpRightDescriptionInputPanel.Margin = new Padding(0);
+            rpRightDescriptionInputPanel.Name = "rpRightDescriptionInputPanel";
+            rpRightDescriptionInputPanel.Size = new Size(808, 386);
+            rpRightDescriptionInputPanel.TabIndex = 5;
+            // 
+            // rpLeftDescriptionPanelTextBox
+            // 
+            rpLeftDescriptionPanelTextBox.Location = new Point(49, 32);
+            rpLeftDescriptionPanelTextBox.Margin = new Padding(1);
+            rpLeftDescriptionPanelTextBox.Multiline = true;
+            rpLeftDescriptionPanelTextBox.Name = "rpLeftDescriptionPanelTextBox";
+            rpLeftDescriptionPanelTextBox.Size = new Size(728, 306);
+            rpLeftDescriptionPanelTextBox.TabIndex = 8;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1303, 772);
+            ClientSize = new Size(1329, 772);
             Controls.Add(MainPanel);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
@@ -265,12 +279,13 @@
             leftPanel.ResumeLayout(false);
             MainPanel.ResumeLayout(false);
             rightPanel.ResumeLayout(false);
-            rightPanel.PerformLayout();
             titleBody.ResumeLayout(false);
             rpLeftNamePanel.ResumeLayout(false);
             rpRightInputPanel.ResumeLayout(false);
             rpRightInputPanel.PerformLayout();
             rpLeftDescriptionPanel.ResumeLayout(false);
+            rpRightDescriptionInputPanel.ResumeLayout(false);
+            rpRightDescriptionInputPanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -289,6 +304,7 @@
         private TextBox rpLeftNamePanelTextbox;
         private Panel rpLeftDescriptionPanel;
         private Label rpLeftDescriptionPanelLabel;
-        private TextBox textBox1;
+        private Panel rpRightDescriptionInputPanel;
+        private TextBox rpLeftDescriptionPanelTextBox;
     }
 }
