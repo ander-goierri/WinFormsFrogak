@@ -18,7 +18,7 @@ namespace WinFormsApp
 
             //Ezkerreko panela pantailaren arabera moldatzeko
             this.Resize += new EventHandler(MainForm_Resize);
-            UpdateLeftPanelSize();
+            UpdatePanelSizes();
 
             //InterfazeaSortu();
 
@@ -26,14 +26,41 @@ namespace WinFormsApp
 
         private void MainForm_Resize(object sender, EventArgs e)
         {
-            UpdateLeftPanelSize();
+            UpdatePanelSizes();
         }
 
-        private void UpdateLeftPanelSize()
+        private void UpdatePanelSizes()
         {
+            UpdateLeftPanel();
+            UpdateRightPanel();
+        }
+
+        private void UpdateLeftPanel()
+        {
+
             // Adibidez, zabaleraren %20 izango da leftPanel
             int width = (int)(this.ClientSize.Width * 0.2);
-            leftPanel.Size = new Size(width, this.ClientSize.Height);
+            leftPanelFlowLayout.Size = new Size(width, this.ClientSize.Height);
+
+            int buttonWidth = leftPanelFlowLayout.ClientSize.Width - leftPanelFlowLayout.Padding.Left - leftPanelFlowLayout.Padding.Right;
+
+            buttonWidth = buttonWidth - 7; // Ezker eta eskuinean marginak antzekoak izateko
+
+            LeftPanel_Button1.Width = buttonWidth;
+            LeftPanel_Button2.Width = buttonWidth;
+
+        }
+
+        private void UpdateRightPanel()
+        {
+            int width = (int)rightPanelTableLayout.Width;
+            bodyTitlePanel.Width = width;
+            int leftWidth = (int)(this.ClientSize.Width * 0.2);
+            int rightWidth = (int)(this.ClientSize.Width * 0.8);
+            panel3.Width = leftWidth;
+            panel1.Width = rightWidth;
+            label1.Width = rightWidth;
+
         }
 
         private void InterfazeaSortu()
@@ -88,20 +115,6 @@ namespace WinFormsApp
             panel.Controls.Add(grid);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //System.Windows.Forms.MessageBox.Show("Nire mezua");
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnProdIkusi_Click(object sender, EventArgs e)
-        {
-            ProduktuakErakutsi(panel2);
-        }
     }
 
 }
