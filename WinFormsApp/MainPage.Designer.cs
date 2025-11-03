@@ -110,11 +110,10 @@
             // 
             // rightPanel
             // 
-            rightPanel.BackColor = Color.Firebrick;
+            rightPanel.BackColor = Color.Transparent;
             rightPanel.Controls.Add(rightPanelTableLayout);
             rightPanel.Dock = DockStyle.Fill;
             rightPanel.Location = new Point(320, 0);
-            rightPanel.Padding = new Padding(50);
             rightPanel.Name = "rightPanel";
             rightPanel.Size = new Size(1009, 772);
             rightPanel.TabIndex = 1;
@@ -132,9 +131,8 @@
             rightPanelTableLayout.Controls.Add(rpRightDescriptionInputPanel, 1, 3);
             rightPanelTableLayout.Dock = DockStyle.Fill;
             rightPanelTableLayout.Location = new Point(0, 0);
-            rightPanelTableLayout.Margin = new Padding(50);
+            rightPanelTableLayout.Margin = new Padding(3);
             rightPanelTableLayout.Name = "rightPanelTableLayout";
-            rightPanelTableLayout.Padding = new Padding(50);
             rightPanelTableLayout.RowCount = 5;
             rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
