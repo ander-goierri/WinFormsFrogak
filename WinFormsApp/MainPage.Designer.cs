@@ -59,6 +59,7 @@
             lpButton1.TabIndex = 1;
             lpButton1.Text = "Menua";
             lpButton1.UseVisualStyleBackColor = true;
+            lpButton1.Click += lpButton1_Click;
             // 
             // lpButton2
             // 
@@ -68,6 +69,7 @@
             lpButton2.TabIndex = 2;
             lpButton2.Text = "Zerrenda";
             lpButton2.UseVisualStyleBackColor = true;
+            lpButton2.Click += lpButton2_Click;
             // 
             // lpButton3
             // 

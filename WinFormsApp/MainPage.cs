@@ -49,11 +49,6 @@ namespace WinFormsApp
 
         }
 
-        private void BtnVerProductos_Click(object? sender, EventArgs e)
-        {
-            ProduktuakErakutsi(panelContenido);
-        }
-
         private void ProduktuakErakutsi(Panel panel)
         {
             panel.Controls.Clear();
@@ -83,9 +78,20 @@ namespace WinFormsApp
 
         private void lpButton3_Click(object sender, EventArgs e)
         {
+            rightPanel.Controls.Clear();
             Formularioa formularioa = new Formularioa();
             formularioa.Dock = DockStyle.Fill;
             rightPanel.Controls.Add(formularioa);
+        }
+
+        private void lpButton1_Click(object sender, EventArgs e)
+        {
+            rightPanel.Controls.Clear();
+        }
+
+        private void lpButton2_Click(object sender, EventArgs e)
+        {
+            ProduktuakErakutsi(rightPanel);
         }
     }
 
