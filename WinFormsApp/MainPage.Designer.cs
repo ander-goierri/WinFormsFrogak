@@ -114,7 +114,7 @@
             rightPanel.Controls.Add(rightPanelTableLayout);
             rightPanel.Dock = DockStyle.Fill;
             rightPanel.Location = new Point(320, 0);
-            rightPanel.Margin = new Padding(3, 4, 3, 4);
+            rightPanel.Padding = new Padding(50);
             rightPanel.Name = "rightPanel";
             rightPanel.Size = new Size(1009, 772);
             rightPanel.TabIndex = 1;
@@ -132,7 +132,9 @@
             rightPanelTableLayout.Controls.Add(rpRightDescriptionInputPanel, 1, 3);
             rightPanelTableLayout.Dock = DockStyle.Fill;
             rightPanelTableLayout.Location = new Point(0, 0);
+            rightPanelTableLayout.Margin = new Padding(50);
             rightPanelTableLayout.Name = "rightPanelTableLayout";
+            rightPanelTableLayout.Padding = new Padding(50);
             rightPanelTableLayout.RowCount = 5;
             rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
@@ -147,9 +149,9 @@
             titleBody.BackColor = Color.Transparent;
             rightPanelTableLayout.SetColumnSpan(titleBody, 2);
             titleBody.Controls.Add(titleBodyLabel);
-            titleBody.Location = new Point(3, 3);
+            titleBody.Location = new Point(53, 53);
             titleBody.Name = "titleBody";
-            titleBody.Size = new Size(968, 68);
+            titleBody.Size = new Size(903, 61);
             titleBody.TabIndex = 0;
             // 
             // titleBodyLabel
@@ -169,9 +171,9 @@
             rpLeftNamePanel.BackColor = Color.IndianRed;
             rpLeftNamePanel.Controls.Add(rpLeftNamePanelLabel);
             rpLeftNamePanel.Dock = DockStyle.Fill;
-            rpLeftNamePanel.Location = new Point(3, 157);
+            rpLeftNamePanel.Location = new Point(53, 187);
             rpLeftNamePanel.Name = "rpLeftNamePanel";
-            rpLeftNamePanel.Size = new Size(195, 148);
+            rpLeftNamePanel.Size = new Size(175, 128);
             rpLeftNamePanel.TabIndex = 2;
             // 
             // rpLeftNamePanelLabel
@@ -190,9 +192,9 @@
             // 
             rpRightInputPanel.BackColor = Color.Transparent;
             rpRightInputPanel.Controls.Add(rpLeftNamePanelTextbox);
-            rpRightInputPanel.Location = new Point(204, 157);
+            rpRightInputPanel.Location = new Point(234, 187);
             rpRightInputPanel.Name = "rpRightInputPanel";
-            rpRightInputPanel.Size = new Size(774, 142);
+            rpRightInputPanel.Size = new Size(722, 128);
             rpRightInputPanel.TabIndex = 3;
             // 
             // rpLeftNamePanelTextbox
@@ -207,9 +209,9 @@
             rpLeftDescriptionPanel.BackColor = Color.IndianRed;
             rpLeftDescriptionPanel.Controls.Add(rpLeftDescriptionPanelLabel);
             rpLeftDescriptionPanel.Dock = DockStyle.Fill;
-            rpLeftDescriptionPanel.Location = new Point(3, 311);
+            rpLeftDescriptionPanel.Location = new Point(53, 321);
             rpLeftDescriptionPanel.Name = "rpLeftDescriptionPanel";
-            rpLeftDescriptionPanel.Size = new Size(195, 380);
+            rpLeftDescriptionPanel.Size = new Size(175, 330);
             rpLeftDescriptionPanel.TabIndex = 4;
             // 
             // rpLeftDescriptionPanelLabel
@@ -228,10 +230,10 @@
             // 
             rpRightDescriptionInputPanel.Controls.Add(rpLeftDescriptionPanelTextBox);
             rpRightDescriptionInputPanel.Dock = DockStyle.Fill;
-            rpRightDescriptionInputPanel.Location = new Point(201, 308);
+            rpRightDescriptionInputPanel.Location = new Point(231, 318);
             rpRightDescriptionInputPanel.Margin = new Padding(0);
             rpRightDescriptionInputPanel.Name = "rpRightDescriptionInputPanel";
-            rpRightDescriptionInputPanel.Size = new Size(808, 386);
+            rpRightDescriptionInputPanel.Size = new Size(728, 336);
             rpRightDescriptionInputPanel.TabIndex = 5;
             // 
             // rpLeftDescriptionPanelTextBox
