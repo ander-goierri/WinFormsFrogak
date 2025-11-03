@@ -2,13 +2,13 @@ using WinFormsApp.Controllerak;
 
 namespace WinFormsApp
 {
-    public partial class Form1 : Form
+    public partial class MainPage : Form
     {
         Panel panelMenu;
         Panel panelContenido;
         Label lblTitulo;
 
-        public Form1()
+        public MainPage()
         {
             InitializeComponent();
 
@@ -48,6 +48,7 @@ namespace WinFormsApp
 
             lpButton1.Width = buttonWidth;
             lpButton2.Width = buttonWidth;
+            lpButton3.Width = buttonWidth;
 
         }
 

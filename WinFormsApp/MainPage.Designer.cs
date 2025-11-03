@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp
 {
-    partial class Form1
+    partial class MainPage
     {
         /// <summary>
         ///  Required designer variable.
@@ -43,6 +43,7 @@
             rpLeftDescriptionPanelLabel = new Label();
             rpRightDescriptionInputPanel = new Panel();
             rpLeftDescriptionPanelTextBox = new TextBox();
+            lpButton3 = new Button();
             leftPanel.SuspendLayout();
             MainPanel.SuspendLayout();
             rightPanel.SuspendLayout();
@@ -58,6 +59,7 @@
             leftPanel.BackColor = Color.LightSlateGray;
             leftPanel.Controls.Add(lpButton1);
             leftPanel.Controls.Add(lpButton2);
+            leftPanel.Controls.Add(lpButton3);
             leftPanel.Dock = DockStyle.Left;
             leftPanel.FlowDirection = FlowDirection.TopDown;
             leftPanel.Location = new Point(0, 0);
@@ -71,7 +73,7 @@
             lpButton1.Name = "lpButton1";
             lpButton1.Size = new Size(317, 60);
             lpButton1.TabIndex = 1;
-            lpButton1.Text = "Zerrenda ikusi";
+            lpButton1.Text = "Menua";
             lpButton1.UseVisualStyleBackColor = true;
             // 
             // lpButton2
@@ -80,7 +82,7 @@
             lpButton2.Name = "lpButton2";
             lpButton2.Size = new Size(317, 60);
             lpButton2.TabIndex = 2;
-            lpButton2.Text = "Menua ikusi";
+            lpButton2.Text = "Zerrenda";
             lpButton2.UseVisualStyleBackColor = true;
             // 
             // MainPanel
@@ -267,6 +269,15 @@
             rpLeftDescriptionPanelTextBox.Size = new Size(728, 306);
             rpLeftDescriptionPanelTextBox.TabIndex = 8;
             // 
+            // lpButton3
+            // 
+            lpButton3.Location = new Point(3, 135);
+            lpButton3.Name = "lpButton3";
+            lpButton3.Size = new Size(317, 60);
+            lpButton3.TabIndex = 3;
+            lpButton3.Text = "Formularioa";
+            lpButton3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -306,5 +317,6 @@
         private Label rpLeftDescriptionPanelLabel;
         private Panel rpRightDescriptionInputPanel;
         private TextBox rpLeftDescriptionPanelTextBox;
+        private Button lpButton3;
     }
 }
