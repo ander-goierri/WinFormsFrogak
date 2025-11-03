@@ -33,6 +33,7 @@
             lpButton2 = new Button();
             lpButton3 = new Button();
             MainPanel = new Panel();
+            rightPanel = new Panel();
             rightPanelTableLayout = new TableLayoutPanel();
             titleBody = new FlowLayoutPanel();
             titleBodyLabel = new Label();
@@ -46,6 +47,7 @@
             rpLeftDescriptionPanelTextBox = new TextBox();
             leftPanel.SuspendLayout();
             MainPanel.SuspendLayout();
+            rightPanel.SuspendLayout();
             rightPanelTableLayout.SuspendLayout();
             titleBody.SuspendLayout();
             rpLeftNamePanel.SuspendLayout();
@@ -97,7 +99,7 @@
             // MainPanel
             // 
             MainPanel.BackColor = Color.WhiteSmoke;
-            MainPanel.Controls.Add(rightPanelTableLayout);
+            MainPanel.Controls.Add(rightPanel);
             MainPanel.Controls.Add(leftPanel);
             MainPanel.Dock = DockStyle.Fill;
             MainPanel.Location = new Point(0, 0);
@@ -105,6 +107,17 @@
             MainPanel.Name = "MainPanel";
             MainPanel.Size = new Size(1329, 772);
             MainPanel.TabIndex = 1;
+            // 
+            // rightPanel
+            // 
+            rightPanel.BackColor = Color.Firebrick;
+            rightPanel.Controls.Add(rightPanelTableLayout);
+            rightPanel.Dock = DockStyle.Fill;
+            rightPanel.Location = new Point(320, 0);
+            rightPanel.Margin = new Padding(3, 4, 3, 4);
+            rightPanel.Name = "rightPanel";
+            rightPanel.Size = new Size(1009, 772);
+            rightPanel.TabIndex = 1;
             // 
             // rightPanelTableLayout
             // 
@@ -118,7 +131,7 @@
             rightPanelTableLayout.Controls.Add(rpLeftDescriptionPanel, 0, 3);
             rightPanelTableLayout.Controls.Add(rpRightDescriptionInputPanel, 1, 3);
             rightPanelTableLayout.Dock = DockStyle.Fill;
-            rightPanelTableLayout.Location = new Point(320, 0);
+            rightPanelTableLayout.Location = new Point(0, 0);
             rightPanelTableLayout.Name = "rightPanelTableLayout";
             rightPanelTableLayout.RowCount = 5;
             rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
@@ -127,8 +140,7 @@
             rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
             rightPanelTableLayout.Size = new Size(1009, 772);
-            rightPanelTableLayout.TabIndex = 1;
-            rightPanelTableLayout.Paint += rightPanelTableLayout_Paint;
+            rightPanelTableLayout.TabIndex = 2;
             // 
             // titleBody
             // 
@@ -211,7 +223,6 @@
             rpLeftDescriptionPanelLabel.TabIndex = 1;
             rpLeftDescriptionPanelLabel.Text = "Deskripzioa";
             rpLeftDescriptionPanelLabel.TextAlign = ContentAlignment.MiddleCenter;
-            rpLeftDescriptionPanelLabel.Click += rpLeftDescriptionPanelLabel_Click;
             // 
             // rpRightDescriptionInputPanel
             // 
@@ -243,6 +254,7 @@
             Text = "Form1";
             leftPanel.ResumeLayout(false);
             MainPanel.ResumeLayout(false);
+            rightPanel.ResumeLayout(false);
             rightPanelTableLayout.ResumeLayout(false);
             titleBody.ResumeLayout(false);
             rpLeftNamePanel.ResumeLayout(false);
@@ -260,17 +272,18 @@
         private Button lpButton1;
         private Button lpButton2;
         private Panel MainPanel;
+        private Panel rightPanel;
+        private Button lpButton3;
         private TableLayoutPanel rightPanelTableLayout;
         private FlowLayoutPanel titleBody;
-        private Panel rpLeftNamePanel;
-        private Panel rpRightInputPanel;
         private Label titleBodyLabel;
+        private Panel rpLeftNamePanel;
         private Label rpLeftNamePanelLabel;
+        private Panel rpRightInputPanel;
         private TextBox rpLeftNamePanelTextbox;
         private Panel rpLeftDescriptionPanel;
         private Label rpLeftDescriptionPanelLabel;
         private Panel rpRightDescriptionInputPanel;
         private TextBox rpLeftDescriptionPanelTextBox;
-        private Button lpButton3;
     }
 }
