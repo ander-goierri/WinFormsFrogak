@@ -88,7 +88,7 @@
             titleBodyLabel.ForeColor = Color.Black;
             titleBodyLabel.Location = new Point(3, 0);
             titleBodyLabel.Name = "titleBodyLabel";
-            titleBodyLabel.Size = new Size(805, 60);
+            titleBodyLabel.Size = new Size(1000, 60);
             titleBodyLabel.TabIndex = 0;
             titleBodyLabel.Text = "Formulario nagusia";
             titleBodyLabel.TextAlign = ContentAlignment.MiddleCenter;
