@@ -31,6 +31,7 @@
             leftPanel = new FlowLayoutPanel();
             lpButton1 = new Button();
             lpButton2 = new Button();
+            lpButton3 = new Button();
             MainPanel = new Panel();
             rightPanel = new TableLayoutPanel();
             titleBody = new FlowLayoutPanel();
@@ -43,7 +44,6 @@
             rpLeftDescriptionPanelLabel = new Label();
             rpRightDescriptionInputPanel = new Panel();
             rpLeftDescriptionPanelTextBox = new TextBox();
-            lpButton3 = new Button();
             leftPanel.SuspendLayout();
             MainPanel.SuspendLayout();
             rightPanel.SuspendLayout();
@@ -85,6 +85,15 @@
             lpButton2.Text = "Zerrenda";
             lpButton2.UseVisualStyleBackColor = true;
             // 
+            // lpButton3
+            // 
+            lpButton3.Location = new Point(3, 135);
+            lpButton3.Name = "lpButton3";
+            lpButton3.Size = new Size(317, 60);
+            lpButton3.TabIndex = 3;
+            lpButton3.Text = "Formularioa";
+            lpButton3.UseVisualStyleBackColor = true;
+            // 
             // MainPanel
             // 
             MainPanel.BackColor = Color.WhiteSmoke;
@@ -117,52 +126,6 @@
             rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             rightPanel.Size = new Size(1009, 772);
             rightPanel.TabIndex = 1;
             rightPanel.Paint += rightPanel_Paint;
@@ -269,23 +232,14 @@
             rpLeftDescriptionPanelTextBox.Size = new Size(728, 306);
             rpLeftDescriptionPanelTextBox.TabIndex = 8;
             // 
-            // lpButton3
-            // 
-            lpButton3.Location = new Point(3, 135);
-            lpButton3.Name = "lpButton3";
-            lpButton3.Size = new Size(317, 60);
-            lpButton3.TabIndex = 3;
-            lpButton3.Text = "Formularioa";
-            lpButton3.UseVisualStyleBackColor = true;
-            // 
-            // Form1
+            // MainPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1329, 772);
             Controls.Add(MainPanel);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "Form1";
+            Name = "MainPage";
             Text = "Form1";
             leftPanel.ResumeLayout(false);
             MainPanel.ResumeLayout(false);
