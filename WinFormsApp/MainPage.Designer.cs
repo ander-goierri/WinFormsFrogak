@@ -33,7 +33,7 @@
             lpButton2 = new Button();
             lpButton3 = new Button();
             MainPanel = new Panel();
-            rightPanel = new TableLayoutPanel();
+            rightPanelTableLayout = new TableLayoutPanel();
             titleBody = new FlowLayoutPanel();
             titleBodyLabel = new Label();
             rpLeftNamePanel = new Panel();
@@ -46,7 +46,7 @@
             rpLeftDescriptionPanelTextBox = new TextBox();
             leftPanel.SuspendLayout();
             MainPanel.SuspendLayout();
-            rightPanel.SuspendLayout();
+            rightPanelTableLayout.SuspendLayout();
             titleBody.SuspendLayout();
             rpLeftNamePanel.SuspendLayout();
             rpRightInputPanel.SuspendLayout();
@@ -97,7 +97,7 @@
             // MainPanel
             // 
             MainPanel.BackColor = Color.WhiteSmoke;
-            MainPanel.Controls.Add(rightPanel);
+            MainPanel.Controls.Add(rightPanelTableLayout);
             MainPanel.Controls.Add(leftPanel);
             MainPanel.Dock = DockStyle.Fill;
             MainPanel.Location = new Point(0, 0);
@@ -106,34 +106,34 @@
             MainPanel.Size = new Size(1329, 772);
             MainPanel.TabIndex = 1;
             // 
-            // rightPanel
+            // rightPanelTableLayout
             // 
-            rightPanel.BackColor = Color.WhiteSmoke;
-            rightPanel.ColumnCount = 2;
-            rightPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            rightPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80F));
-            rightPanel.Controls.Add(titleBody, 0, 0);
-            rightPanel.Controls.Add(rpLeftNamePanel, 0, 2);
-            rightPanel.Controls.Add(rpRightInputPanel, 1, 2);
-            rightPanel.Controls.Add(rpLeftDescriptionPanel, 0, 3);
-            rightPanel.Controls.Add(rpRightDescriptionInputPanel, 1, 3);
-            rightPanel.Dock = DockStyle.Fill;
-            rightPanel.Location = new Point(320, 0);
-            rightPanel.Name = "rightPanel";
-            rightPanel.RowCount = 5;
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            rightPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            rightPanel.Size = new Size(1009, 772);
-            rightPanel.TabIndex = 1;
-            rightPanel.Paint += rightPanel_Paint;
+            rightPanelTableLayout.BackColor = Color.WhiteSmoke;
+            rightPanelTableLayout.ColumnCount = 2;
+            rightPanelTableLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            rightPanelTableLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80F));
+            rightPanelTableLayout.Controls.Add(titleBody, 0, 0);
+            rightPanelTableLayout.Controls.Add(rpLeftNamePanel, 0, 2);
+            rightPanelTableLayout.Controls.Add(rpRightInputPanel, 1, 2);
+            rightPanelTableLayout.Controls.Add(rpLeftDescriptionPanel, 0, 3);
+            rightPanelTableLayout.Controls.Add(rpRightDescriptionInputPanel, 1, 3);
+            rightPanelTableLayout.Dock = DockStyle.Fill;
+            rightPanelTableLayout.Location = new Point(320, 0);
+            rightPanelTableLayout.Name = "rightPanelTableLayout";
+            rightPanelTableLayout.RowCount = 5;
+            rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            rightPanelTableLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            rightPanelTableLayout.Size = new Size(1009, 772);
+            rightPanelTableLayout.TabIndex = 1;
+            rightPanelTableLayout.Paint += rightPanelTableLayout_Paint;
             // 
             // titleBody
             // 
             titleBody.BackColor = Color.Transparent;
-            rightPanel.SetColumnSpan(titleBody, 2);
+            rightPanelTableLayout.SetColumnSpan(titleBody, 2);
             titleBody.Controls.Add(titleBodyLabel);
             titleBody.Location = new Point(3, 3);
             titleBody.Name = "titleBody";
@@ -243,7 +243,7 @@
             Text = "Form1";
             leftPanel.ResumeLayout(false);
             MainPanel.ResumeLayout(false);
-            rightPanel.ResumeLayout(false);
+            rightPanelTableLayout.ResumeLayout(false);
             titleBody.ResumeLayout(false);
             rpLeftNamePanel.ResumeLayout(false);
             rpRightInputPanel.ResumeLayout(false);
@@ -260,7 +260,7 @@
         private Button lpButton1;
         private Button lpButton2;
         private Panel MainPanel;
-        private TableLayoutPanel rightPanel;
+        private TableLayoutPanel rightPanelTableLayout;
         private FlowLayoutPanel titleBody;
         private Panel rpLeftNamePanel;
         private Panel rpRightInputPanel;

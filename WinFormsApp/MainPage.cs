@@ -55,7 +55,7 @@ namespace WinFormsApp
         private void UpdateRightPanel()
         {
 
-            int fullWidth = (int)rightPanel.Width;
+            int fullWidth = (int)rightPanelTableLayout.Width;
             int leftWidth = (int)(this.ClientSize.Width * 0.2);
             int rightWidth = (int)(this.ClientSize.Width * 0.8);
 
@@ -153,7 +153,7 @@ namespace WinFormsApp
 
         }
 
-        private void rightPanel_Paint(object sender, PaintEventArgs e)
+        private void rightPanelTableLayout_Paint(object sender, PaintEventArgs e)
         {
 
         }
