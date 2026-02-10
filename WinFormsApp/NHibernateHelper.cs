@@ -35,6 +35,21 @@ namespace WinFormsApp
                 return sessionFactory;
             }
         }
+
+
+        public static void zentratuBertikalEtaHorizontalki(Control elem, Panel panel)
+        {
+            int panelWidth = panel.Width;
+            int panelHeight = panel.Height;
+
+            int labelWidth = elem.Width;
+            int labelHeight = elem.Height;
+
+            elem.Location = new Point(
+                (panelWidth - labelWidth) / 2,
+                (panelHeight - labelHeight) / 2
+            );
+        }
     }
 
 }
