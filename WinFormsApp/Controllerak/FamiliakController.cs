@@ -4,18 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WinFormsApp.DTOak;
 using WinFormsApp.Modeloak;
+using WinFormsApp.Zerbitzuak;
 
 namespace WinFormsApp.Controllerak
 {
     public class FamiliakController
     {
-        public static List<Produktua> DenakLortu()
+        // Hobe konfiguraziotik etortzea; momentuz konstante bat
+        private static readonly ApiZerbitzua _api = new ApiZerbitzua();
+
+        public static Task<List<FamiliaDto>> DenakLortuAsync(bool eager = false)
         {
-            using (ISession session = NHibernateHelper.SessionFactory.OpenSession())
-            {
-                return session.Query<Produktua>().ToList();
-            }
+            return _api.FamiliakLortuAsync(eager);
         }
     }
 }

@@ -24,8 +24,8 @@ namespace WinFormsApp
             familiaGridView.CellContentClick += FamiliaGridView_CellContentClick;
             familiaGridView.SelectionChanged += FamiliaGridView_SelectionChanged;
 
+            this.Load += FamiliaZerrenda_Load;
             ConfigureGrid();
-            LoadDemoData(); // o SetFamiliaDataFromApi();
             UpdatePanelSizes();
         }
 
@@ -193,7 +193,7 @@ namespace WinFormsApp
         {
             // Si FamiliakController devuelve una lista de objetos, lo ideal es mapearlo a DataTable o BindingList.
             // De momento lo dejamos tal cual, pero si esto no se ve bien, lo adaptamos.
-            var data = FamiliakController.DenakLortu();
+            var data = FamiliakController.DenakLortuAsync();
             familiaGridView.DataSource = data;
 
             _dt = null; // ya no tenemos DataTable local
@@ -294,5 +294,20 @@ namespace WinFormsApp
                 ? _lastUpdate.Value.ToString("yyyy-MM-dd HH:mm")
                 : "-";
         }
+
+        private async void FamiliaZerrenda_Load(object? sender, EventArgs e)
+        {
+            try
+            {
+                // eager=false normalean zerrendarako (arinagoa)
+                var familiak = await FamiliakController.DenakLortuAsync(eager: false);
+                familiaGridView.DataSource = familiak;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ezin izan da familiak kargatu: " + ex.Message);
+            }
+        }
     }
+
 }
