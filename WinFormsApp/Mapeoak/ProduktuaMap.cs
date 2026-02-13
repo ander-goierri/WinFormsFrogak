@@ -8,8 +8,11 @@ using WinFormsApp.Modeloak;
 
 namespace WinFormsApp.Mapeoak
 {
-    using FluentNHibernate.Mapping;
-    public class ProduktuaMap: ClassMap<Produktua>
+    /// <summary>
+    /// <see cref="Produktua"/> entitatearen eta datu-baseko "produktuak" taularen arteko
+    /// Fluent NHibernate mapaketa definitzen du.
+    /// </summary>
+    public class ProduktuaMap : ClassMap<Produktua>
     {
         public ProduktuaMap()
         {

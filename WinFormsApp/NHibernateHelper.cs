@@ -12,10 +12,19 @@ namespace WinFormsApp
     using System;
     using WinFormsApp.Modeloak;
 
+    /// <summary>
+    /// WinForms aplikaziorako NHibernate konfigurazioa eta laguntza metodo osagarriak.
+    /// </summary>
     public static class NHibernateHelper
     {
         private static ISessionFactory sessionFactory;
 
+        /// <summary>
+        /// Aplikazioan erabiliko den <see cref="ISessionFactory"/> instantzia bakarra.
+        /// </summary>
+        /// <remarks>
+        /// Lehen aldiz eskatzen denean sortzen da (lazy initialization).
+        /// </remarks>
         public static ISessionFactory SessionFactory
         {
             get
@@ -36,7 +45,11 @@ namespace WinFormsApp
             }
         }
 
-
+        /// <summary>
+        /// Elementu bat panel baten barruan bertikalki eta horizontalki zentratzen du.
+        /// </summary>
+        /// <param name="elem">Zentratu nahi den kontrola.</param>
+        /// <param name="panel">Kontrola kokatuko den panela.</param>
         public static void zentratuBertikalEtaHorizontalki(Control elem, Panel panel)
         {
             int panelWidth = panel.Width;
@@ -51,5 +64,4 @@ namespace WinFormsApp
             );
         }
     }
-
 }
